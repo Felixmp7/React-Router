@@ -8,6 +8,7 @@ import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
+import { BrowserRouter } from 'react-router-dom'
 
 
 // Construccion de un middleware
@@ -43,7 +44,9 @@ const store = createStore(
 const homeContainer = document.getElementById('home-container')
 
 render(
-  <Provider store={store}>
-    <Home />
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      <Home />
+    </Provider>
+  </BrowserRouter>
   , homeContainer)
