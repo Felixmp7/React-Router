@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {render} from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
@@ -9,6 +9,7 @@ import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import { BrowserRouter } from 'react-router-dom'
+import Header from '../pages/components/header'
 
 
 // Construccion de un middleware
@@ -48,7 +49,10 @@ render(
     basename="/"
   >
     <Provider store={store}>
-      <Home />
+      <Fragment>
+        <Header/>
+        <Home/>
+      </Fragment>
     </Provider>
   </BrowserRouter>
   , homeContainer)
