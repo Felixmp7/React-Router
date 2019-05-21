@@ -49,3 +49,7 @@ Aun no estas cambiando nada dentro de la interfaz, solamente se esta cambiando l
 - exact: recibe un booleano, si le indicas que es verdadero solo hará match si la ruta coincide exactamente con la ubicación, no hará caso a ninguna sub-ruta.
 - strict: recibe un booleano, si le indicas que es verdadero solo hará match si la ruta a la que te diriges es idéntica a la ruta del Route.
 - sensitive: recibe un booleano, si le indicas que es verdadero activara el case sensitive para la ruta.
+
+## Parámetros de navegación
+
+En esta clase vamos a aprender a personalizar un poco más nuestra url y pasar parámetros a través de esta. Haremos uso del componente Link y su propiedad to dentro de cada componente Media de nuestro proyecto.
