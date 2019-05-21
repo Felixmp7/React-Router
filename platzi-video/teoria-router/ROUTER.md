@@ -53,3 +53,9 @@ Aun no estas cambiando nada dentro de la interfaz, solamente se esta cambiando l
 ## Parámetros de navegación
 
 En esta clase vamos a aprender a personalizar un poco más nuestra url y pasar parámetros a través de esta. Haremos uso del componente Link y su propiedad to dentro de cada componente Media de nuestro proyecto.
+
+## Switch
+
+Se encarga de solo renderizar el primer componente que haga match con la ruta que estés designando.
+
+El componente Redirect nos ayudara para realizar un redireccionamiento en el navegador, sus principales parámetros son from y to que sirven para indicar de que ruta van a redirigir hacía que ruta van a realizar el redireccionamiento.
