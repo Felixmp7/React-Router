@@ -11,7 +11,7 @@ import VideoPlayer from '../../player/containers/video-player'
 import * as actions from '../../actions'
 import { bindActionCreators } from 'redux'
 
-class Home extends Component {
+class Videos extends Component {
   handleOpenModal = id => {
     this.props.actions.openModal(id)
   }
@@ -82,4 +82,4 @@ function mapDispatchToProps(dispatch){
   //En ésta funcion lo que hago es bindear mis acciones como props para no tener
   // que utilizar this.props.dispatch() sino manejar las acciones desde las props
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Videos)

@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 import {render} from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import Home from '../pages/containers/home'
+import Videos from '../pages/containers/videos'
 import reducer from '../reducers/index'
 import { Map as map } from 'immutable'
 import logger from 'redux-logger'
@@ -50,6 +50,7 @@ render(
       <Fragment>
         <Header/>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/videos" component={Videos}/>
       </Fragment>
     </Provider>
   </BrowserRouter>
