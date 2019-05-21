@@ -59,3 +59,9 @@ En esta clase vamos a aprender a personalizar un poco más nuestra url y pasar p
 Se encarga de solo renderizar el primer componente que haga match con la ruta que estés designando.
 
 El componente Redirect nos ayudara para realizar un redireccionamiento en el navegador, sus principales parámetros son from y to que sirven para indicar de que ruta van a redirigir hacía que ruta van a realizar el redireccionamiento.
+
+## Prompt, validación antes de dejar la página
+
+Vamos a implementar una validación antes de dejar la página en la que se encuentra el usuario. Esto sucede comúnmente en páginas que incluyan un formulario para evitar que el usuario se vaya sin enviar el formulario o dejarlo a medias.
+
+Dentro de nuestro proyecto esto tiene sentido cuando estamos realizando alguna búsqueda. Para implementarlo usaremos el componente Prompt cuyos parámetros que recibe son when que recibe un booleano para indicar si muestra el mensaje del navegador y message que recibe un string que será el mensaje que reciba el usuario.
