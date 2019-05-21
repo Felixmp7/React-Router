@@ -10,6 +10,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Header from '../pages/components/header'
+import Home from '../pages/components/home'
 
 
 // Construccion de un middleware
