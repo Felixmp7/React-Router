@@ -1,11 +1,16 @@
 import React from 'react'
 import './Search.css'
+import { Prompt } from 'react-router'
 
 const Search = props => (
   <form
     className="Search"
     onSubmit={props.handleSubmit}
   >
+    <Prompt
+      when
+      message='¿Estás seguro de querer abandonar la pagina?'
+    />
     <input
       ref={props.setRef}
       type="text"
