@@ -30,6 +30,11 @@ class Header extends Component {
                     Perfil
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink to="/v" activeClassName="is-selected">
+                    Redirect
+                  </NavLink>
+                </li>
               </ul>
             </nav>
           </header>

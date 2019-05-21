@@ -8,7 +8,7 @@ import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Header from '../pages/components/header'
 import Home from '../pages/components/home'
 import NotFound from '../pages/components/not-found'
@@ -54,7 +54,11 @@ render(
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/videos" component={Videos}/>
+          <Redirect from='/v' to='/videos' />
           <Route component={NotFound}/>
+          {/* Un aporte menor. No olvidar poner siempre la ruta de NotFound de 
+          ultima porque si se pone por encima de los Redirects estos no van
+          a hacer el redireccionamiento. */}
         </Switch>
         {/* Switch solo renderiza el primer componente que haga match con la ruta
         que yo esté designando */}
