@@ -12,7 +12,16 @@ class Media extends PureComponent {
   }
   render(){
     return(
-      <Link>
+      <Link
+        to={{
+          pathname: '/videos',
+          search: `?id=${this.props.id}`,
+          state: {
+            modal: true,
+            id: this.props.id
+          }
+        }}
+        >
         <div className="Media" onClick={this.handleClick}>
           <div className="Media-cover">
             <img
