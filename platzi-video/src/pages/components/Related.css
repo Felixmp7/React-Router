@@ -1,4 +1,5 @@
 .Related{
   width: 20%;
   min-width: 250px;
+  flex-shrink: 0;
 }
