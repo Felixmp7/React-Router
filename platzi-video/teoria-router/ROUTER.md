@@ -37,3 +37,15 @@ BrowserRouter no hará mucho si no esta acompañado de enlaces y rutas, empecemo
 - exact: recibe un booleano, sirve para marcar si dirige a una ruta exacta. Se vera a mayor profundidad cuando manejemos rutas.
 - strict: recibe un booleano, sirve para marcar si dirige a una ruta estricta. Se vera a mayor profundidad cuando manejemos rutas.
 - location: sirve para poder hacer la comparación de isActive con alguna otra ruta.
+
+## Route
+
+Aun no estas cambiando nada dentro de la interfaz, solamente se esta cambiando la url. Para poder cambiar la interfaz acorde a la url usaremos Route, algunas propiedades son:
+
+- component: que componente quieres renderizar.
+- path: indica la ruta en la cual va a renderizar el componente que le pases.
+- render: es una alternativa a componente, puedes hacer un renderizado en forma de función como en los componentes de React.
+- children: son los hijos o componentes que tenga anidado.
+- exact: recibe un booleano, si le indicas que es verdadero solo hará match si la ruta coincide exactamente con la ubicación, no hará caso a ninguna sub-ruta.
+- strict: recibe un booleano, si le indicas que es verdadero solo hará match si la ruta a la que te diriges es idéntica a la ruta del Route.
+- sensitive: recibe un booleano, si le indicas que es verdadero activara el case sensitive para la ruta.
