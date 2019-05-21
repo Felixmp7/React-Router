@@ -45,9 +45,7 @@ const store = createStore(
 const homeContainer = document.getElementById('home-container')
 
 render(
-  <BrowserRouter
-    // basename="/videos"
-  >
+  <BrowserRouter>
     <Provider store={store}>
       <Fragment>
         <Header/>
