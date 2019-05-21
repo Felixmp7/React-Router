@@ -8,7 +8,7 @@ import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Header from '../pages/components/header'
 
 
@@ -49,7 +49,7 @@ render(
     <Provider store={store}>
       <Fragment>
         <Header/>
-        <Home/>
+        <Route exact path="/" component={Home}/>
       </Fragment>
     </Provider>
   </BrowserRouter>
