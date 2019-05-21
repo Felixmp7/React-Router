@@ -55,7 +55,7 @@ render(
         <Route exact path="/videos" component={Videos}/>
         <Route component={NotFound}/>
         {/* Cuando no hay match con ninguna ruta, podemos utilizar un Route sin path
-          para que renderizar el error 404 */}
+          para renderizar el error 404 */}
       </Fragment>
     </Provider>
   </BrowserRouter>
