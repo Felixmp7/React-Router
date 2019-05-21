@@ -8,7 +8,7 @@ import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Header from '../pages/components/header'
 import Home from '../pages/components/home'
 import NotFound from '../pages/components/not-found'
@@ -51,11 +51,13 @@ render(
     <Provider store={store}>
       <Fragment>
         <Header/>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/videos" component={Videos}/>
-        <Route component={NotFound}/>
-        {/* Cuando no hay match con ninguna ruta, podemos utilizar un Route sin path
-          para renderizar el error 404 */}
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/videos" component={Videos}/>
+          <Route component={NotFound}/>
+        </Switch>
+        {/* Switch solo renderiza el primer componente que haga match con la ruta
+        que yo esté designando */}
       </Fragment>
     </Provider>
   </BrowserRouter>
