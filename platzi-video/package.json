@@ -34,9 +34,9 @@
     "webpack-dev-server": "2.9.3"
   },
   "bugs": {
-    "url": "https://github.com/Felixmp7/React-JS/issues"
+    "url": "https://github.com/Felixmp7/React-Router/issues"
   },
-  "homepage": "https://github.com/Felixmp7/React-JS#readme",
+  "homepage": "https://github.com/Felixmp7/React-Router#readme",
   "dependencies": {
     "immutable": "^4.0.0-rc.12",
     "normalizr": "^3.3.0",
