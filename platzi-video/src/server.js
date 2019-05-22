@@ -10,6 +10,9 @@ app.get('*', (request,response) => {
   const html = reactDOMServer.renderToString(
     <StaticRouter
       location={request.url} //Ruta dinámica
+      context={{
+        name: 'Felix'
+      }}
       >
         <App />
       </StaticRouter>
