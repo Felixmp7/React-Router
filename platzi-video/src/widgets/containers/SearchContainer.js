@@ -31,9 +31,6 @@ class SearchContainer extends Component {
       value: event.target.value,
       prompt: !!(event.target.value.length)
     })
-    // console.log(!(event.target.value.length));
-    console.log(!!(event.target.value.length));
-    console.log(event.target.value.length);
   }
   render() {
     return(

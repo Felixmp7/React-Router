@@ -18,6 +18,7 @@ const Search = props => (
       name="search"
       value={props.value}
       onChange={props.handleChange}
+      placeholder="Busca tu canción favorita"
     />
   </form>
 )
