@@ -5,9 +5,11 @@ import reactDOMServer from 'react-dom/server'
 
 const app = express();
 
-<StaticRouter>
-  <App />
-</StaticRouter>
+const html = reactDOMServer.renderToString(
+  <StaticRouter>
+    <App />
+  </StaticRouter>
+)
 
 app.get('*', (request,response) => {
   console.log(request.url);
