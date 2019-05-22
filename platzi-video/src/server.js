@@ -1,6 +1,7 @@
 import express from 'express'
 import App from '../dist/ssr/app'
 import {StaticRouter} from 'react-router'
+import reactDOMServer from 'react-dom/server'
 
 const app = express();
 
