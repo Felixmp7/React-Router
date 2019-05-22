@@ -65,3 +65,15 @@ El componente Redirect nos ayudara para realizar un redireccionamiento en el nav
 Vamos a implementar una validación antes de dejar la página en la que se encuentra el usuario. Esto sucede comúnmente en páginas que incluyan un formulario para evitar que el usuario se vaya sin enviar el formulario o dejarlo a medias.
 
 Dentro de nuestro proyecto esto tiene sentido cuando estamos realizando alguna búsqueda. Para implementarlo usaremos el componente Prompt cuyos parámetros que recibe son when que recibe un booleano para indicar si muestra el mensaje del navegador y message que recibe un string que será el mensaje que reciba el usuario.
+
+## Manipulando el historial
+
+Hasta el momento has aprendido a manipular las rutas por medio de componentes, en esta clase vamos a aprender a navegar de forma más programática.
+
+Dentro de los componentes que renderizamos a través de Route encontramos en sus props un objeto llamado history, este objeto cuenta con multiples propiedades y métodos como:
+
+- go: es un método que te permite ir a cierto momento en el historial de navegación, recibe como parámetro un número, dependiendo de la cantidad es cuanto avanzara en el historial y si es positivo o negativo será la dirección que tome.
+- goBack: es un método que te permite navegar una pagina hacia atrás, funciona de forma similar a que si llamáramos a go(-1).
+- goForward: es un método que te permite navegar una pagina hacia adelante, funciona de forma similar que si llamáramos a go(1).
+- push: te permite añadir una nueva ruta al stack de navegación.
+Dentro de nuestro proyecto vamos a añadir algunas propiedades de history en nuestro componente NotFound para poder navegar hacia atrás, navegar hacia adelante o bien ver un video aleatorio.
