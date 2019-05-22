@@ -5,15 +5,15 @@ import reactDOMServer from 'react-dom/server'
 
 const app = express();
 
-const html = reactDOMServer.renderToString(
-  <StaticRouter
-    location="/videos" //Ruta estatica
-    >
-    <App />
-  </StaticRouter>
-)
 
 app.get('*', (request,response) => {
+  const html = reactDOMServer.renderToString(
+    <StaticRouter
+      location={request.url} //Ruta dinámica
+      >
+        <App />
+      </StaticRouter>
+    )
   console.log(request.url);
   response.write(
     `
