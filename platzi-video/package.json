@@ -9,7 +9,8 @@
     "build:local": "webpack --env.NODE_ENV=local",
     "build:prod": "webpack -p --env.NODE_ENV=production",
     "build:server": "webpack --env.NODE_ENV=local --config ./webpack.server.config.js",
-    "server": "babel-node src/server.js --presets react,es2015,stage-2"
+    "server": "babel-node src/server.js --presets react,es2015,stage-2",
+    "watch:server": "babel-watch src/server.js --presets react,es2015,stage-2"
   },
   "repository": {
     "type": "git",
