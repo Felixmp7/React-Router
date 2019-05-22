@@ -5,6 +5,9 @@ import logo from '../../images/logo.png';
 import {withRouter} from 'react-router'
 
 class Header extends Component {
+  handleClick = () => {
+    this.props.history.goBack()
+  }
     render() {
         return (
           <header className="Header">
@@ -35,6 +38,11 @@ class Header extends Component {
                   <NavLink to="/v" activeClassName="is-selected">
                     Redirect
                   </NavLink>
+                </li>
+                <li>
+                  <a onClick={this.handleClick}>
+                    Hacia Atrás
+                  </a>
                 </li>
               </ul>
             </nav>
