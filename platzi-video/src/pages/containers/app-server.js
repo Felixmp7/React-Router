@@ -1,16 +1,16 @@
 import React, {Fragment} from 'react'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import Videos from '../pages/containers/videos'
-import reducer from '../reducers/index'
+import Videos from './videos'
+import reducer from '../../reducers/index'
 import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import Header from '../pages/components/header'
-import Home from '../pages/components/home'
-import NotFound from '../pages/components/not-found'
+import Header from '../components/header'
+import Home from '../components/home'
+import NotFound from '../components/not-found'
 
 const store = createStore(
   reducer,
