@@ -50,13 +50,14 @@ render(
   <BrowserRouter>
     <Provider store={store}>
       <Fragment>
-        <Header/>
+        <Header/>{/*Como hacer para que éste componente utilice history o location si no está
+                  renderizado dentro de un Route?  */}
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/videos" component={Videos}/>
           <Redirect from='/v' to='/videos' />
           <Route component={NotFound}/>
-          {/* Un aporte menor. No olvidar poner siempre la ruta de NotFound de 
+          {/* Un aporte menor. No olvidar poner siempre la ruta de NotFound de
           ultima porque si se pone por encima de los Redirects estos no van
           a hacer el redireccionamiento. */}
         </Switch>
