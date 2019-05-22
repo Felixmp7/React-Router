@@ -77,3 +77,11 @@ Dentro de los componentes que renderizamos a través de Route encontramos en sus
 - goForward: es un método que te permite navegar una pagina hacia adelante, funciona de forma similar que si llamáramos a go(1).
 - push: te permite añadir una nueva ruta al stack de navegación.
 Dentro de nuestro proyecto vamos a añadir algunas propiedades de history en nuestro componente NotFound para poder navegar hacia atrás, navegar hacia adelante o bien ver un video aleatorio.
+
+## Obteniendo el historial desde cualquier componente
+
+El history es una propiedad que le llega a componentes que son renderizados por el componente padre Route, pero ¿qué pasa con los componentes que no son paginas o qué simplemente no forman parte de ninguna ruta?.
+
+Dentro de nuestro curso tenemos un caso de ese estilo, el Header no forma parte de ninguna ruta por lo tanto no recibe las propiedades de history, location y match.
+
+Existe un High Order Component llamado withRouter que te permite añadir estas propiedades.
