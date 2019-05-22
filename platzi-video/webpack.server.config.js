@@ -21,7 +21,7 @@ module.exports = (env) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].[hash].js',
-      publicPath: path.resolve(__dirname, 'dist')+"/",
+      publicPath: "/",
       chunkFilename: 'js/[id].[chunkhash].js',
       libraryTarget: 'commonjs2'
     },
