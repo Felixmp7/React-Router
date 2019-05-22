@@ -22,7 +22,9 @@ class Videos extends Component {
   componentDidMount(){
     const search = this.props.location.search
     if (search) {
-      const id = search.split('=')[1]
+      const id = search.split('=')[1] //El método split corta, le estoy diciendo que
+      // corte en donde está el '=' y que conserve lo que queda en la posicion [1] de
+      // ese array
       console.log(search);
       console.log('posicion 0',id);
       this.handleOpenModal(id)
