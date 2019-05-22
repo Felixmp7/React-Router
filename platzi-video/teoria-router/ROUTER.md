@@ -95,3 +95,13 @@ Lo primero que debemos hacer es configurar Webpack ya que requerimos que algunos
 Por defecto, Webpack te va a exportar los archivos para navegador, para cambiar esto debemos escribir la propiedad target con el valor que queramos en este caso Node.
 
 Por último, le indicamos a Webpack que nuestro archivo lo guarde en una carpeta distinta y añadimos al package.json un nuevo script para que ejecute Webpack.
+
+## StaticRouter
+
+Los métodos utilizados de HTML5 para el BrowserRouter no existen en Node, por eso se debe utilizar StaticRouter.
+
+Dentro de nuestro proyecto en el archivo app.js encontraremos varios componentes que solo funcionan del lado del navegador, necesitamos separar las cosas en un archivo de compilación para el cliente y uno para el servidor.
+
+Vamos a realizar el refactor del archivo app.js para tener dos archivos y configurar Webpack para separar la compilación de archivos.
+
+Una vez separados y compilados los archivos, dentro de nuestro servidor vamos a importar StaticRouter y el archivo compilado que no tiene nada relacionado al navegador para envolverlo dentro de StaticRouter.
