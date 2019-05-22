@@ -6,7 +6,9 @@ import reactDOMServer from 'react-dom/server'
 const app = express();
 
 const html = reactDOMServer.renderToString(
-  <StaticRouter>
+  <StaticRouter
+    location="/videos" //Ruta estatica
+    >
     <App />
   </StaticRouter>
 )
