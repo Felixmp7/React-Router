@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react'
-import {render} from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import Videos from '../pages/containers/videos'
@@ -8,7 +7,7 @@ import { Map as map } from 'immutable'
 import logger from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Header from '../pages/components/header'
 import Home from '../pages/components/home'
 import NotFound from '../pages/components/not-found'
@@ -24,20 +23,22 @@ const store = createStore(
   )
 )
 
-const homeContainer = document.getElementById('home-container')
+class AppServer extends React.Component {
+  render(){
+    return(
+      <Provider store={store}>
+        <Fragment>
+          <Header/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/videos" component={Videos}/>
+            <Redirect from='/v' to='/videos' />
+            <Route component={NotFound}/>
+          </Switch>
+        </Fragment>
+      </Provider>
+    )
+  }
+}
 
-render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <Fragment>
-        <Header/>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/videos" component={Videos}/>
-          <Redirect from='/v' to='/videos' />
-          <Route component={NotFound}/>
-        </Switch>
-      </Fragment>
-    </Provider>
-  </BrowserRouter>
-  , homeContainer)
+export default AppServer
