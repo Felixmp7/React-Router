@@ -15,7 +15,6 @@ module.exports = (env) => {
   }
 
   return {
-
     entry: {
       "app": path.resolve(__dirname, 'src/entries/app.js'),
     },
@@ -24,10 +23,12 @@ module.exports = (env) => {
       filename: 'js/[name].[hash].js',
       publicPath: path.resolve(__dirname, 'dist')+"/",
       chunkFilename: 'js/[id].[chunkhash].js',
+      libraryTarget: 'commonjs2'
     },
     devServer: {
       port: 9000,
     },
+    target: 'node', //Por defecto, trae 'browser'
     module: {
       rules: [
         {
