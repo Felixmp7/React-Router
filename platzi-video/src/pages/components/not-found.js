@@ -2,6 +2,15 @@ import React, { PureComponent } from 'react';
 import './generic-page.css';
 
 class NotFound extends PureComponent {
+  handleForwardClick = () => {
+    this.props.history.goForward()
+  }
+  handleBackClick = () => {
+    this.props.history.goBack()
+  }
+  handleRandomClick = () => {
+    this.props.history.goBack()
+  }
   render() {
     return (
       <div className="Page NotFound">
