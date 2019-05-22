@@ -1,5 +1,6 @@
 import express from 'express'
 import App from '../dist/ssr/app'
+import React from 'react'
 import {StaticRouter} from 'react-router'
 import reactDOMServer from 'react-dom/server'
 
@@ -28,7 +29,7 @@ app.get('*', (request,response) => {
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
       </head>
       <body>
-        <div id="home-container">Hola Mundo${request.url}</div>
+        <div id="home-container">${html}</div>
         <div id="modal-container"></div>
       <script src="http://localhost:9000/js/app.js"></script>
       </body>
