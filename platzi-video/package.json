@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/Felixmp7/React-Router#readme",
   "dependencies": {
+    "express": "^4.17.0",
     "immutable": "^4.0.0-rc.12",
     "normalizr": "^3.3.0",
     "prop-types": "^15.7.2",
