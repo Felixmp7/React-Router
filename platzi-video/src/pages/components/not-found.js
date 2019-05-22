@@ -8,9 +8,9 @@ class NotFound extends PureComponent {
         <h1>404</h1>
         <h3 className="SadFace">:(</h3>
         <h2>No hemos encontrado la página que buscabas</h2>
-        <button className="Button">Ir a la siguiente pagina</button>
-        <button className="Button">Ir a la pagina anterior</button>
-        <button className="Button">Video Random</button>
+        <button onClick={this.handleForwardClick} className="Button">Ir a la siguiente pagina</button>
+        <button onClick={this.handleBackClick} className="Button">Ir a la pagina anterior</button>
+        <button onClick={this.handleRandomClick} className="Button">Video Random</button>
       </div>
     )
   }
