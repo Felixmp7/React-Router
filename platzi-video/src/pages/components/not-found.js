@@ -13,7 +13,7 @@ class NotFound extends PureComponent {
   handleRandomClick = () => {
     // Para ir a una ruta en especifico, puedo utilizar el método push
     const random = Math.round(Math.random() * (10 - 1) + 1)
-    this.props.history.push(`/videos?=${random}`, {id: random})
+    this.props.history.push(`/videos?id=${random}`)
   }
   render() {
     return (
