@@ -1,11 +1,12 @@
-const express = require('express');
-const App = require('../dist/ssr/app')
-const ReactRouter = require('react-router')
+import express from 'express'
+import App from '../dist/ssr/app'
+import {StaticRouter} from 'react-router'
+
 const app = express();
 
-<ReactRouter.StaticRouter>
+<StaticRouter>
   <App />
-</ReactRouter.StaticRouter>
+</StaticRouter>
 
 app.get('*', (request,response) => {
   console.log(request.url);
